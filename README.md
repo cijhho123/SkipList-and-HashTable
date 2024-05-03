@@ -290,3 +290,90 @@ You may find these functions useful in your implementations.
 
 ![](Images/17.png)
 
+![](Images/18.png)
+
+### Task 3.6
+**Implement the Chaining-based hash table in the class ChainedHashTable<K, V>**
+> The code is available [here](Implementation/ChainedHashTable.java).
+
+### Task 3.7
+**Implement the Linear Probing-based hash table in the class ProbingHashTable<K,V>.**
+> The code is available [here](Implementation/ProbingHashTable.java).
+
+### Task 3.8
+
+![](Images/19.png)
+
+**Run the measurements on ProbingHashTable for 30 times, and complete the average Insertion and Search time (in nano-seconds) for the max load factors α ∈ {1/2, 3/4, 7/8, 15/16} in the table:**
+
+![](Images/20.png)
+
+### Task 3.9
+**What can we deduce regarding the relation of the load-factor to the average operation time in Linear-Probing based hash tables?**
+> The higher the load factor, the slower each operation takes, and it approach O(n) as the loadfactor approaches 1. That’s because in each traversal of the table we need to look for an empty cell for longer time (because the table is in higher capacity).
+
+### Task 3.10
+**Run the measurements on ChainingHashTable for 30 times, and complete the average Insertion and Search time (in nano-seconds) for the max load factors α ∈ {1/2, 3/4, 1, 3/2, 2} in the table:**
+
+![](Images/21.png)
+
+
+### Task 3.11
+**What can we deduce regarding the relation of the load-factor to the average operation time in Chaining-based hash tables?**
+
+> The higher the load factor the higher the search on averge, that’s because in addition to going into the right cell we also need to perform linear search in the linked list to find the item (if exist). But the insertion stays relatively contant because we inserting element to the head of the list - making its length irrelevant.
+
+
+### Task 3.12
+In HashingUtils you are given functions that return a list of num unique random items of type Integer,Long and String respectively. Using these functions, we wish to test the cost of the hashing functions inour implementations of hash tables. In order to do so, we will perform the same experiment executed inmeasureOperationChained(max-load-factor) for max-load-factor = 1. We want to run the experiment 10times using a table that accepts Long keys, and 10 times for a table accepting String keys.To do so, you are requested to implement the following functions in HashingExperimentUtils and runthe experiment:
+
+- **measureLongOperations()** - Measures the cost of a table using Dietzfelbinger et al. for Long items.
+- **measureStringOperations()** - Measures the cost of a table using Carter-Wegman for Strings, with strings of length 10 to 20.
+
+**What are the results of the experiment described above? What can we deduce from these results?**
+
+The results are:
+
+![](Images/22.png)
+
+We can deduce that hashing strings is a lot more expensive that hashing numbers using the Dietzfelbinger et al hashing algorithm.
+
+# Theoretical Questions
+The ADT **Dictionary** includes three operations: **Insert(x), Search(key) and Delete(x)**. It can be implemented using Hash Tables with Chaining, with time complexity of Θ(1) worst case, Θ(1) expected, and Θ(1) expected, respectively. In this section, we will look at the implementation of additional operations using Chaining-based Hash Tables.
+
+In each of the following questions, you must describe an algorithm, write a Pseudo-Code, and analyze its time complexity.
+
+**Remark:** Notice that you may not change the time complexity of the original Insert/Search/Delete operations.
+
+### Task 3.13
+**Describe the operation Successor(val), where val exists in the hash table.**
+
+![](Images/23.png)
+
+
+### Task 3.14
+**Describe the operation Minimum()**
+
+![](Images/24.png)
+
+### Task 3.15
+**Describe the operation Rank(val), where val might not appear in the hash table.**
+
+![](Images/25.png)
+
+
+### Task 3.16
+**Describe the operation Select(i), where 1 ≤ i ≤ n.**
+
+> The algorithm for finding the ith number in the hash table is finding the maximum of the DS in O(n) and using the radix sort algorithm from class and going to the ith element Because we go over the entire data-structure to find the maximum in O(n) and then perform radix sort in O(n) the overall time complexity is O(n)
+
+
+# Designing a data structure according to given specifications
+In this section, we will design a new data structure according to a specified ADT and its time complexity requirements. This DS will contain int values, thus, val is always of type int. The requirements of the ADT are
+
+![](Images/25.png)
+
+### Task 4.1
+Implement a data structure that supports the requirements mentioned previously in the class **MyDataStructur**e. Provide a short (5 lines each) explanation of each of the implementations, and explain the time complexity of each of the operations.
+
+I did not answer this one due to a lack of time, I might get back to this question for fun in the future.
