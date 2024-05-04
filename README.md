@@ -371,7 +371,7 @@ In each of the following questions, you must describe an algorithm, write a Pseu
 # Designing a data structure according to given specifications
 In this section, we will design a new data structure according to a specified ADT and its time complexity requirements. This DS will contain int values, thus, val is always of type int. The requirements of the ADT are
 
-![](Images/25.png)
+![](Images/26.png)
 
 ### Task 4.1
 Implement a data structure that supports the requirements mentioned previously in the class **MyDataStructur**e. Provide a short (5 lines each) explanation of each of the implementations, and explain the time complexity of each of the operations.
